@@ -1,0 +1,296 @@
+<button class="navbar-toggler" type="button" ng-click="showMenu()">
+  <img src="img/nav-toggle.png" height="30" />
+</button>
+
+<nav class="navbar fixed-top navbar-expand-lg navbar-light bg-white p-0">
+  <div class="container">  
+    <a class="navbar-brand" ui-sref="home">
+      <img src="img/logo.png" alt=""/>      
+    </a>
+
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav mr-auto">        
+      </ul>
+      <form class="form-inline my-2 my-lg-0 nav-tabs-ctn">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item px-2">
+            <a class="nav-link" ui-sref="home">{{'parent.topMenu1' | translate}}</a>
+          </li>
+          <li class="active nav-item px-2">
+            <a class="nav-link" ui-sref="parents">{{'parent.topMenu2' | translate}}</a>
+          </li>
+          <li class="nav-item px-2">
+            <a class="nav-link" ui-sref="prof.default">{{'parent.topMenu3' | translate}}</a>
+          </li>
+          <li class="nav-item px-2 dropdown">
+            <a class="nav-link dropdown-toggle" href id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              {{'parent.topMenu4' | translate}}
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href ng-click="langChange('en')"><img src="flags/4x3/us.svg" height="20"/>&nbsp;&nbsp;English (US)</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href ng-click="langChange('fr')"><img src="flags/4x3/fr.svg" height="20"/>&nbsp;&nbsp;Français</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href ng-click="langChange('es')"><img src="flags/4x3/es.svg" height="20"/>&nbsp;&nbsp;Español</a>
+            </div>
+          </li>
+          <li class="nav-item px-1">
+            <a class="nav-link icon-ctn" href="#"><i class="fa fa-facebook"></i></a>
+          </li>
+          <li class="nav-item px-1">
+            <a class="nav-link icon-ctn" href="#"><i class="fa fa-twitter"></i></a>
+          </li>
+          <li class="nav-item px-1">
+            <a class="nav-link icon-ctn" href="#"><i class="fa fa-envelope"></i></a>
+          </li>
+        </ul>
+      </form>
+    </div>
+  </div>
+</nav>
+<div class="sticky-appt no-desktop">
+  <a href data-toggle="modal" data-target="#learnMoreModal" class="btn btn-cta btn-circle pt-2">
+    <i class="fa fa-pencil-square-o"></i>
+  </a>
+</div>
+
+<div class="container-fluid ctn-parent h-100">
+  <div class="main h-100">
+    <div class="container px-0 h-100 ctn-outer">
+      <div class="row row-outer">        
+        <div class="col-md-6"></div>
+        <div class="col-md-6 parent-content-ctn">
+          <div class="mb-4">            
+            <img class="main-img" src="img/sim37-sm.png"/>
+          </div>
+          <div class="mb-4">
+            <h1>{{'parent.headingText' | translate}}</h1>
+          </div>
+          <div class="mb-4 content-desc">
+            {{'parent.subHeadingText' | translate}}
+          </div>
+          <div class="mb-4">
+            <a href data-toggle="modal" data-target="#learnMoreModal" class="btn btn-cta btn-circle pt-2"><h5 class="mt-1">{{'parent.headingButtonText' | translate}}</h5></a>
+            <a href data-toggle="modal" data-target="#videoModal" class="btn btn-cta btn-outline btn-circle pt-2 ml-3 no-mobile"><h5 class="mt-1">{{'parent.headingButton2Text' | translate}}</h5></a><br/>
+            <iframe class="no-desktop" src="https://www.youtube.com/embed/qawfk3V6xws?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-mobile w-100 no-desktop text-center" ng-click="scrollDown()">
+      <i class="fa fa-angle-down"></i>
+    </div>  
+  </div>  
+</div>
+<div class="container-fluid ctn-steps">
+  <div class="container px-0 h-100">
+    <div class="row steps-title">
+      <div class="col text-center">
+        <h1>{{'parent.section1Title' | translate}}<hr/></h1>
+      </div>
+    </div>
+    <div class="row no-mobile">
+      <div class="col">
+        <img src="img/step-1.png">
+        <div class="step-item-ctn pl-3">
+          <h5 class="step-item-title">{{'parent.step1Text' | translate}}</h5>
+          <span class="step-item-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</span>
+        </div>
+      </div>
+      <div class="col">
+        <img src="img/step-2.png">
+        <div class="step-item-ctn pl-3">
+          <h5 class="step-item-title">{{'parent.step2Text' | translate}}</h5>
+          <span class="step-item-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</span>
+        </div>
+      </div>
+    </div>
+    <div class="row row-bottom no-mobile">
+      <div class="col">
+        <img src="img/step-3.png">
+        <div class="step-item-ctn pl-3">
+          <h5 class="step-item-title">{{'parent.step3Text' | translate}}</h5>
+          <span class="step-item-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</span>
+        </div>
+      </div>
+      <div class="col">
+        <img src="img/step-4.png">
+        <div class="step-item-ctn pl-3">
+          <h5 class="step-item-title">{{'parent.step4Text' | translate}}</h5>
+          <span class="step-item-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</span>
+        </div>
+      </div>
+    </div>
+    <div class="row text-center no-desktop">
+      <div class="col-12">
+        <img src="img/step-1-mob.png" height="150" />
+        <div class="step-item-ctn">
+          <h5 class="step-item-title">{{'parent.step1Text' | translate}}</h5>
+        </div>
+      </div>
+      <div class="col-12">
+        <img src="img/step-2-mob.png" height="150" />
+        <div class="step-item-ctn">
+          <h5 class="step-item-title">{{'parent.step2Text' | translate}}</h5>
+        </div>
+      </div>
+      <div class="col-12">
+        <img src="img/step-3-mob.png" height="150" />
+        <div class="step-item-ctn">
+          <h5 class="step-item-title">{{'parent.step3Text' | translate}}</h5>
+        </div>
+      </div>
+      <div class="col-12">
+        <img src="img/step-4-mob.png" height="150" />
+        <div class="step-item-ctn">
+          <h5 class="step-item-title">{{'parent.step4Text' | translate}}</h5>
+        </div>
+      </div>
+    </div>
+    <div class="text-center steps-vid">
+      <video src="videos/Babyprogress_SIM37.mp4" controls="controls" poster="img/video-ol.jpg"></video>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid ctn-adv">
+  <div class="container px-0 h-100">
+    <div class="row steps-title">
+      <div class="col text-center">
+        <h3>
+          {{'parent.section2Title' | translate}}<br/>
+          <a class="nav-link pb-1 px-0" href="http://www.monsim37.fr">www.monsim37.fr</a>
+        </h3>
+        <img src="img/caroline.png">
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid ctn-faq">
+  <div class="container px-0 h-100">
+    <div class="row steps-title">
+      <div class="col text-center">
+        <h1>{{'parent.section3Title' | translate}}<hr/></h1>
+      </div>
+    </div>
+    <div class="row faq-row mx-auto" ng-repeat="r in faqs track by $index">
+      <div class="col">
+        <div class="step-item-ctn pl-3">
+          <div class="arrow-ctn">
+            <i ng-show="r.showAnswer" class="fa fa-angle-up"></i>
+            <i ng-hide="r.showAnswer" class="fa fa-angle-down"></i>
+          </div>
+          <h5 ng-click="r.showAnswer = !r.showAnswer" class="noselect step-item-title">{{r.q}}</h5>
+          <span ng-show="r.showAnswer" class="step-item-desc">{{r.a}}</span>
+        </div>
+      </div>
+    </div>
+    <hr/>
+    <div class="footer" ng-click="scrollUp()">
+      <div class="no-mobile">BabyProgress &copy; 2018</div>
+      <div class="no-desktop text-center footer-mobile-page">
+        <i class="fa fa-angle-up"></i><br/>
+        <span>{{'parent.footerText1' | translate}}</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="learnMoreModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body text-center">
+        <div class="modal-row">          
+          <img src="img/sim37-sm.png" height="100"/>
+        </div>
+        <div class="modal-row lead">          
+          <span ng-bind-html="'parent.modalText1' | translate">
+        </div>
+        <div class="modal-row lead">          
+          <span ng-bind-html="'parent.modalText2' | translate"></span><br/>
+          <span class="highlight">01 45 00 78 12</span>
+        </div>
+        <div class="modal-row lead">          
+          <span ng-bind-html="'parent.modalText3' | translate"></span><br/>
+          <span class="highlight">question@babyprogress.fr</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="p-0 modal-body text-center">
+        <iframe src="https://www.youtube.com/embed/qawfk3V6xws?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="mobile-menu h-100 w-100">
+  <nav class="navbar navbar-expand-lg navbar-light bg-white p-0">
+    <div class="container">  
+      <a class="navbar-brand" ui-sref="home">
+        <img src="img/logo.png" alt=""/>      
+      </a>
+      <button class="navbar-toggler close" type="button" ng-click="hideMenu()">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+  </nav>
+  <div class="container-fluid ctn-menu text-right text-white">
+    <div class="menu-item">
+      <p class="h5">{{'professionnel.mobileMenuTitle' | translate}}</p>
+      <img class="ml-3 mt-2" src="flags/4x3/us.svg" height="25" ng-click="langChange('en')"/>
+      <img class="ml-3 mt-2" src="flags/4x3/fr.svg" height="25" ng-click="langChange('fr')"/>
+      <img class="ml-3 mt-2" src="flags/4x3/es.svg" height="25" ng-click="langChange('es')"/>
+    </div>
+    <div class="menu-item">      
+      <p ng-click="hideMenu('parents')" class="h2">{{'professionnel.topMenu2' | translate}}&nbsp;&nbsp;&nbsp;<i class="fa fa-angle-right"></i></p>
+    </div>
+    <div class="menu-item">      
+      <p ng-click="hideMenu('prof.default')" class="h2">{{'professionnel.topMenu3' | translate}}&nbsp;&nbsp;&nbsp;<i class="fa fa-angle-right"></i></p>
+    </div>
+    <div class="menu-item sub">      
+      <p ng-click="hideMenu('prof.gyn')" class="h4">{{'professionnel.menu1' | translate}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+    </div>
+    <div class="menu-item sub">      
+      <p ng-click="hideMenu('prof.rad')" class="h4">{{'professionnel.menu2' | translate}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+    </div>
+    <div class="menu-item sub">      
+      <p ng-click="hideMenu('prof.sage')" class="h4">{{'professionnel.menu3' | translate}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+    </div>
+    <div class="menu-item sub">      
+      <p ng-click="hideMenu('prof.gen')" class="h4">{{'professionnel.menu4' | translate}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+    </div>
+    <div class="menu-item sub">      
+      <p ng-click="hideMenu('prof.autre')" class="h4">{{'professionnel.menu5' | translate}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+    </div>
+    <div class="navbar-mobile w-100 text-center px-4">    
+      <ul class="navbar-nav mr-auto">      
+        <li class="nav-item">
+          <a class="mr-4 nav-link icon-ctn" href="#"><i class="fa fa-facebook"></i></a>
+          <a class="mr-4 nav-link icon-ctn" href="#"><i class="fa fa-twitter"></i></a>
+          <a class="nav-link icon-ctn" href="#"><i class="fa fa-envelope"></i></a>
+        </li>
+      </ul>
+      <hr class="border-white"/>
+      <div class="footer">
+        BabyProgress &copy; 2018
+      </div>
+    </div>
+  </div>
+</div>

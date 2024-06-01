@@ -1,0 +1,210 @@
+<button class="navbar-toggler" type="button" ng-click="showMenu()">
+  <img src="img/nav-toggle.png" height="30" />
+</button>
+
+<nav class="navbar fixed-top navbar-expand-lg navbar-light bg-white p-0">
+  <div class="container">  
+    <a class="navbar-brand" ui-sref="home">
+      <img src="img/logo.png" alt=""/>      
+    </a>
+
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav mr-auto">        
+      </ul>
+      <form class="form-inline my-2 my-lg-0 nav-tabs-ctn">
+        <ul class="navbar-nav mr-auto">
+          <li class="active nav-item px-2">
+            <a class="nav-link" ui-sref="home">{{'home.topMenu1' | translate}}</a>
+          </li>
+          <li class="nav-item px-2">
+            <a class="nav-link" ui-sref="parents">{{'home.topMenu2' | translate}}</a>
+          </li>
+          <li class="nav-item px-2">
+            <a class="nav-link" ui-sref="prof.default">{{'home.topMenu3' | translate}}</a>
+          </li>
+          <li class="nav-item px-2 dropdown">
+            <a class="nav-link dropdown-toggle" href id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              {{'home.topMenu4' | translate}}
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href ng-click="langChange('en')"><img src="flags/4x3/us.svg" height="20"/>&nbsp;&nbsp;English (US)</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href ng-click="langChange('fr')"><img src="flags/4x3/fr.svg" height="20"/>&nbsp;&nbsp;Français</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href ng-click="langChange('es')"><img src="flags/4x3/es.svg" height="20"/>&nbsp;&nbsp;Español</a>
+            </div>
+          </li>
+          <li class="nav-item px-1">
+            <a class="nav-link icon-ctn" href="#"><i class="fa fa-facebook"></i></a>
+          </li>
+          <li class="nav-item px-1">
+            <a class="nav-link icon-ctn" href="#"><i class="fa fa-twitter"></i></a>
+          </li>
+          <li class="nav-item px-1">
+            <a class="nav-link icon-ctn" href="#"><i class="fa fa-envelope"></i></a>
+          </li>
+        </ul>
+      </form>
+    </div>
+  </div>
+</nav>
+
+<div class="container-fluid h-100 ctn-home">
+  <div class="container px-0 h-100 ctn-outer">
+    <div class="row h-100">
+      <div class="col-md-6"></div>
+      <div class="col-md-6 home-content-ctn">
+        <h1>{{'home.heading1' | translate}}</h1>
+        <a href data-toggle="modal" data-target="#learnMoreModal" class="btn btn-cta btn-circle"><h5 class="mt-1">{{'home.heading1Btn' | translate}}</h5></a><br/>
+        <div class="card-ctn no-mobile">
+          <div class="card" ng-click="goTo('prof.default')">
+            <img class="card-img-top" src="img/pro.png">
+            <div class="card-body">
+              <p class="card-title">{{'home.formProfTitle' | translate}}</p>
+              <a class="nav-link p-0">{{'home.formProfText1' | translate}}&nbsp;<img src="img/sim37-sm.png" height="15"/></a>
+            </div>
+          </div>
+          <div class="card" ng-click="goTo('parents')">
+            <img class="card-img-top" src="img/par.png">
+            <div class="card-body">
+              <p class="card-title">{{'home.formParentTitle' | translate}}</p>
+              <a class="nav-link p-0">{{'home.formParentText1' | translate}}&nbsp;<img src="img/sim37-sm.png" height="15"/></a>
+            </div>
+          </div>
+        </div>
+        <div class="mt-4 px-3 w-100 no-desktop card-ctn-mob">
+          <div class="mb-4 row" ng-click="goTo('parents')">
+            <div class="col-4 px-0 card-par">
+            </div>
+            <div class="col-8 px-0">
+              <div class="w-100 h-100 bg-white">
+                <h5 class="p-2 pl-3 mb-0">{{'home.formParentTitle' | translate}}</h5>
+                <a class="nav-link p-0 pl-3">{{'home.formParentText1' | translate}}&nbsp;<img src="img/sim37-sm.png" height="15"/></a>
+              </div>
+            </div>
+          </div>
+          <div class="row" ng-click="goTo('prof.default')">
+            <div class="col-4 px-0 card-pro">
+            </div>
+            <div class="col-8 px-0">
+              <div class="w-100 h-100 bg-white">
+                <h5 class="p-2 pl-3 mb-0">{{'home.formProfTitle' | translate}}</h5>
+                <a class="nav-link p-0 pl-3">{{'home.formProfText1' | translate}}&nbsp;<img src="img/sim37-sm.png" height="15"/></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-mob-bg no-desktop w-100"></div>  
+</div>
+
+<div class="modal fade home-modal" id="learnMoreModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body text-center">
+        <div class="modal-row">          
+          <img src="img/sim37-sm.png" height="100"/>
+        </div>
+        <div class="modal-row lead">          
+          <p class="modal-text mb-0">{{'home.modalHeading1' | translate}}</p>
+          <p class="modal-text mb-0">{{'home.modalHeading2' | translate}}</p>
+          <p class="modal-text mb-0">{{'home.modalHeading3' | translate}}</p>
+        </div>
+        <div class="modal-row text-left lead">          
+          {{'home.modalText1' | translate}}
+        </div>
+        <div class="modal-row text-left lead">          
+          {{'home.modalText2' | translate}}
+        </div>
+        <div class="modal-row text-left lead">          
+          {{'home.modalText3' | translate}}
+        </div>
+        <div class="modal-row text-left lead">          
+          {{'home.modalText4' | translate}}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="mobile-menu h-100 w-100">
+  <nav class="navbar navbar-expand-lg navbar-light bg-white p-0">
+    <div class="container">  
+      <a class="navbar-brand" ui-sref="home">
+        <img src="img/logo.png" alt=""/>      
+      </a>
+      <button class="navbar-toggler close" type="button" ng-click="hideMenu()">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+  </nav>
+  <div class="container-fluid ctn-menu text-right text-white">
+    <div class="menu-item">
+      <p class="h5">{{'professionnel.mobileMenuTitle' | translate}}</p>
+      <img class="ml-3 mt-2" src="flags/4x3/us.svg" height="25" ng-click="langChange('en')"/>
+      <img class="ml-3 mt-2" src="flags/4x3/fr.svg" height="25" ng-click="langChange('fr')"/>
+      <img class="ml-3 mt-2" src="flags/4x3/es.svg" height="25" ng-click="langChange('es')"/>
+    </div>
+    <div class="menu-item">      
+      <p ng-click="hideMenu('parents')" class="h2">{{'professionnel.topMenu2' | translate}}&nbsp;&nbsp;&nbsp;<i class="fa fa-angle-right"></i></p>
+    </div>
+    <div class="menu-item">      
+      <p ng-click="hideMenu('prof.default')" class="h2">{{'professionnel.topMenu3' | translate}}&nbsp;&nbsp;&nbsp;<i class="fa fa-angle-right"></i></p>
+    </div>
+    <div class="menu-item sub">      
+      <p ng-click="hideMenu('prof.gyn')" class="h4">{{'professionnel.menu1' | translate}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+    </div>
+    <div class="menu-item sub">      
+      <p ng-click="hideMenu('prof.rad')" class="h4">{{'professionnel.menu2' | translate}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+    </div>
+    <div class="menu-item sub">      
+      <p ng-click="hideMenu('prof.sage')" class="h4">{{'professionnel.menu3' | translate}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+    </div>
+    <div class="menu-item sub">      
+      <p ng-click="hideMenu('prof.gen')" class="h4">{{'professionnel.menu4' | translate}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+    </div>
+    <div class="menu-item sub">      
+      <p ng-click="hideMenu('prof.autre')" class="h4">{{'professionnel.menu5' | translate}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+    </div>
+    <div class="navbar-mobile w-100 text-center px-4">    
+      <ul class="navbar-nav mr-auto">      
+        <li class="nav-item">
+          <a class="mr-4 nav-link icon-ctn" href="#"><i class="fa fa-facebook"></i></a>
+          <a class="mr-4 nav-link icon-ctn" href="#"><i class="fa fa-twitter"></i></a>
+          <a class="nav-link icon-ctn" href="#"><i class="fa fa-envelope"></i></a>
+        </li>
+      </ul>
+      <hr class="border-white"/>
+      <div class="footer">
+        BabyProgress &copy; 2018
+      </div>
+    </div>
+  </div>
+</div>
+
+
+        <!-- <div class="card" ng-click="goTo('parents')">
+          <img class="card-img-top" src="img/par.png">
+          <div class="card-body">
+            <p class="card-title">{{'home.formParentTitle' | translate}}</p>
+            <a class="nav-link p-0">{{'home.formParentText1' | translate}}&nbsp;<img src="img/sim37-sm.png" height="15"/></a>
+          </div>
+        </div>
+        <div class="card" ng-click="goTo('prof.default')">
+          <img class="card-img-top" src="img/pro.png">
+          <div class="card-body">
+            <p class="card-title">{{'home.formProfTitle' | translate}}</p>
+            <a class="nav-link p-0">{{'home.formProfText1' | translate}}&nbsp;<img src="img/sim37-sm.png" height="15"/></a>
+          </div>
+        </div> -->
+<!--       <div class="pt-3 w-100 text-center no-desktop dots-ctn">
+        <div ng-click="moveCards(0, 1)" ng-class="{'active':currDot == 1}" class="dot mr-2"></div>
+        <div ng-click="moveCards(-200, 2)" ng-class="{'active':currDot == 2}" class="dot"></div>
+      </div> -->

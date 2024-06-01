@@ -1,0 +1,109 @@
+<button class="navbar-toggler" type="button" ng-click="showMenu()">
+  <img src="img/nav-toggle.png" height="30" />
+</button>
+
+<nav class="navbar fixed-top navbar-expand-lg navbar-light bg-white p-0">
+  <div class="container">  
+    <a class="navbar-brand" ui-sref="home">
+      <img src="img/logo.png" alt=""/>      
+    </a>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">        
+      </ul>
+      <form class="form-inline my-2 my-lg-0 nav-tabs-ctn">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item px-2">
+            <a class="nav-link" ui-sref="home">{{'professionnel.topMenu1' | translate}}</a>
+          </li>
+          <li class="nav-item px-2">
+            <a class="nav-link" ui-sref="parents">{{'professionnel.topMenu2' | translate}}</a>
+          </li>
+          <li class="active nav-item px-2">
+            <a class="nav-link" ui-sref="prof.default">{{'professionnel.topMenu3' | translate}}</a>
+          </li>
+          <li class="nav-item px-2 dropdown">
+            <a class="nav-link dropdown-toggle" href id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              {{'professionnel.topMenu4' | translate}}
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href ng-click="langChange('en')""><img src="flags/4x3/us.svg" height="20"/>&nbsp;&nbsp;English (US)</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href ng-click="langChange('fr')"><img src="flags/4x3/fr.svg" height="20"/>&nbsp;&nbsp;Français</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href ng-click="langChange('es')"><img src="flags/4x3/es.svg" height="20"/>&nbsp;&nbsp;Español</a>
+            </div>
+          </li>
+          <li class="nav-item px-1">
+            <a class="nav-link icon-ctn" href="#"><i class="fa fa-facebook"></i></a>
+          </li>
+          <li class="nav-item px-1">
+            <a class="nav-link icon-ctn" href="#"><i class="fa fa-twitter"></i></a>
+          </li>
+          <li class="nav-item px-1">
+            <a class="nav-link icon-ctn" href="#"><i class="fa fa-envelope"></i></a>
+          </li>
+        </ul>
+      </form>
+    </div>
+  </div>
+</nav>
+
+<div class="container-fluid px-0 ctn-outer text-center">
+  <div ui-view></div>
+</div>
+
+<div class="mobile-menu h-100 w-100">
+  <nav class="navbar navbar-expand-lg navbar-light bg-white p-0">
+    <div class="container">  
+      <a class="navbar-brand" ui-sref="home">
+        <img src="img/logo.png" alt=""/>      
+      </a>
+      <button class="navbar-toggler close" type="button" ng-click="hideMenu()">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+  </nav>
+  <div class="container-fluid ctn-menu text-right text-white">
+    <div class="menu-item">
+      <p class="h5">{{'professionnel.mobileMenuTitle' | translate}}</p>
+      <img class="ml-3 mt-2" src="flags/4x3/us.svg" height="25" ng-click="langChange('en')"/>
+      <img class="ml-3 mt-2" src="flags/4x3/fr.svg" height="25" ng-click="langChange('fr')"/>
+      <img class="ml-3 mt-2" src="flags/4x3/es.svg" height="25" ng-click="langChange('es')"/>
+    </div>
+    <div class="menu-item">      
+      <p ng-click="hideMenu('parents')" class="h2">{{'professionnel.topMenu2' | translate}}&nbsp;&nbsp;&nbsp;<i class="fa fa-angle-right"></i></p>
+    </div>
+    <div class="menu-item">      
+      <p ng-click="hideMenu('prof.default')" class="h2">{{'professionnel.topMenu3' | translate}}&nbsp;&nbsp;&nbsp;<i class="fa fa-angle-right"></i></p>
+    </div>
+    <div class="menu-item sub">      
+      <p ng-click="hideMenu('prof.gyn')" class="h4">{{'professionnel.menu1' | translate}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+    </div>
+    <div class="menu-item sub">      
+      <p ng-click="hideMenu('prof.rad')" class="h4">{{'professionnel.menu2' | translate}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+    </div>
+    <div class="menu-item sub">      
+      <p ng-click="hideMenu('prof.sage')" class="h4">{{'professionnel.menu3' | translate}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+    </div>
+    <div class="menu-item sub">      
+      <p ng-click="hideMenu('prof.gen')" class="h4">{{'professionnel.menu4' | translate}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+    </div>
+    <div class="menu-item sub">      
+      <p ng-click="hideMenu('prof.autre')" class="h4">{{'professionnel.menu5' | translate}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+    </div>
+    <div class="navbar-mobile w-100 text-center px-4">    
+      <ul class="navbar-nav mr-auto">      
+        <li class="nav-item">
+          <a class="mr-4 nav-link icon-ctn" href="#"><i class="fa fa-facebook"></i></a>
+          <a class="mr-4 nav-link icon-ctn" href="#"><i class="fa fa-twitter"></i></a>
+          <a class="nav-link icon-ctn" href="#"><i class="fa fa-envelope"></i></a>
+        </li>
+      </ul>
+      <hr class="border-white"/>
+      <div class="footer">
+        BabyProgress &copy; 2018
+      </div>
+    </div>
+  </div>
+</div>

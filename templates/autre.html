@@ -1,0 +1,130 @@
+<h1 class="pro-title">{{'autre.mainTitle' | translate}}</h1>
+<!-- <div class="pro-bg-ctn"></div> -->
+<img class="pro-bg-ctn no-mobile" src="img/pro-bg.jpg" />
+<img class="pro-bg-ctn no-desktop" src="img/pro-bg-mob.png" />
+<ul class="nav justify-content-center pro-menu">
+  <li class="nav-item">
+    <a class="nav-link" ui-sref="prof.gyn">{{'professionnel.menu1' | translate}}</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" ui-sref="prof.rad">{{'professionnel.menu2' | translate}}</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" ui-sref="prof.sage">{{'professionnel.menu3' | translate}}</a>
+  </li>
+  <li class="nav-item no-mobile">
+    <a class="nav-link" ui-sref="prof.gen">{{'professionnel.menu4' | translate}}</a>
+  </li>
+  <li class="nav-item no-desktop">
+    <a class="nav-link" ui-sref="prof.gen">{{'professionnel.menu4mobile' | translate}}</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link active" ui-sref="prof.autre">{{'professionnel.menu5' | translate}}</a>
+  </li>
+</ul>
+<div class="container-fluid px-0 pro-content-ctn">
+  <div class="container px-0 autre-form">
+    <h3 class="pro-sub-title">{{'autre.formTitle' | translate}}</h3>
+    <div class="row faq-row mx-auto">
+      <div class="col-md-6 pr-md-5">
+        <div class="step-item-ctn">
+          <div class="sel-arrow-ctn">
+            <i class="fa fa-angle-down"></i>
+          </div>
+          <h5 class="noselect step-item-title">{{'autre.formField1' | translate}}</h5>
+          <span class="step-item-desc">
+            <select ng-options="o.name for o in autreForm.qualOpts" class="form-control" ng-model="autreForm.qual" required>
+              <option value="">{{'autre.formField1Default' | translate}}</option>
+            </select>
+          </span>
+        </div>
+      </div>
+      <div class="col-md-6 pl-md-5">
+        <div class="step-item-ctn">
+          <h5 class="noselect step-item-title">{{'autre.formField2' | translate}}</h5>
+          <span class="step-item-desc">
+          	<input type="text" class="form-control" ng-model="autreForm.etab" />
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="row faq-row mx-auto">
+      <div class="col-md-6 pr-md-5">
+        <div class="step-item-ctn">
+          <h5 class="noselect step-item-title">{{'autre.formField3' | translate}}</h5>
+          <span class="step-item-desc">
+          	<input type="text" class="form-control" ng-model="autreForm.lnom" />
+          </span>
+        </div>
+      </div>
+      <div class="col-md-6 pl-md-5">
+        <div class="step-item-ctn">
+          <h5 class="noselect step-item-title">{{'autre.formField4' | translate}}</h5>
+          <span class="step-item-desc">
+          	<input type="text" class="form-control" ng-model="autreForm.fnom" />
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="row faq-row mx-auto">
+      <div class="col-md-6 pr-md-5">
+        <div class="step-item-ctn">
+          <div class="sel-arrow-ctn">
+            <i class="fa fa-angle-down"></i>
+          </div>
+          <h5 class="noselect step-item-title">{{'autre.formField5' | translate}}</h5>
+          <span class="step-item-desc">
+            <select class="form-control" ng-options="o.name for o in autreForm.specOpts" ng-model="autreForm.spec" required>
+              <option value="">{{'autre.formField5Default' | translate}}</option>
+            </select>
+          </span>
+        </div>
+      </div>
+      <div class="col-md-6 pl-md-5">
+        <div class="step-item-ctn">
+          <h5 class="noselect step-item-title">{{'autre.formField6' | translate}}</h5>
+          <span class="step-item-desc">
+          	<input type="text" class="form-control" ng-model="autreForm.pays" />
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="row faq-row mx-auto">
+      <div class="col-md-6 pr-md-5">
+        <div class="step-item-ctn">
+          <h5 class="noselect step-item-title">{{'autre.formField7' | translate}}</h5>
+          <span class="step-item-desc">
+          	<input type="text" class="form-control" ng-model="autreForm.ville" />
+          </span>
+        </div>
+      </div>
+      <div class="col-md-6 pl-md-5">
+        <div class="step-item-ctn">
+          <h5 class="noselect step-item-title">{{'autre.formField8' | translate}}</h5>
+          <span class="step-item-desc">
+          	<input type="text" class="form-control" ng-model="autreForm.email" />
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="row faq-row mx-auto">
+      <div class="col-md-6 pr-md-5">
+        <div class="step-item-ctn">
+          <h5 class="noselect step-item-title">{{'autre.formField9' | translate}}</h5>
+          <span class="step-item-desc">
+          	<input type="text" class="form-control" ng-model="autreForm.tel" />
+          </span>
+        </div>
+      </div>      
+    </div>
+    <div class="pro-img-ctn">          
+      <button ng-click="submitAutreForm()" class="btn btn-lg btn-join btn-pro">
+        {{'autre.formSubmitText' | translate}}
+      </button>
+    </div>
+    <hr class="no-mobile"/>
+    <div class="footer no-mobile">
+      BabyProgress &copy; 2018
+    </div> 
+  </div>
+</div>
